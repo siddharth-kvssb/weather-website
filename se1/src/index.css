@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montseratt", sans-serif;
+}
+.App {
+  background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--vqF9LVka--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://images.unsplash.com/photo-1545193544-312983719627%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1650%26q%3D80");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+}
+.App.warm {
+  background-image: url("https://images.unsplash.com/photo-1572339152406-cd1dcaa388aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90JTIwc3VufGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+}
+.App.cold {
+  background-image: url("https://i.pinimg.com/originals/95/b1/ea/95b1eaec001975a3fae4e4fc77d50176.gif");
+}
+.App.hot {
+  background-image: url("https://soperth.com.au/wp-content/uploads/2019/12/giphy-3-2.gif");
+}
+.App.clouds {
+  background-image: url("https://townsquare.media/site/385/files/2016/08/cloudy-day-3-1376042788goo.jpg?w=980&q=75");
+}
+.App.mist {
+  background-image: url("https://www.keloland.com/wp-content/uploads/sites/103/2022/11/ezgif.com-gif-maker-20.gif");
+}
+.App.fog {
+  background-image: url("https://cdn.quotesgram.com/img/19/47/1429196251-black-and-white-fog-foggy-forest-Favim_com-369984.gif");
+}
+
+.App.rain {
+  background-image: url("https://media.tenor.com/ZAw_hz_GBBsAAAAd/rain.gif");
+}
+.App.clear {
+  background-image: url("https://clarksvillenow.sagacom.com/files/2020/10/shutterstock_206307496-1200x768.jpg");
+}
+.App.smoke {
+  background-image: url("https://thumbs.gfycat.com/GloomyThirdGalapagosdove-size_restricted.gif");
+}
+.App.haze {
+  background-image: url("https://s.w-x.co/util/image/w/in-fog_2.jpg?crop=16:9&width=480&format=pjpg&auto=webp&quality=60x");
+}
+
+main {
+  min-height: 100vh;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+
+  padding: 25px;
+}
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+.search-box .search-bar {
+  display: block;
+
+  width: 50%;
+  margin-left: 25%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 0px 16px 16px;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  font-size: 20px;
+
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box .location {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+.weather-box .Mtemp {
+  position: relative;
+  display: inline-flex;
+  margin: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+.weather-box .mtemp {
+  position: relative;
+  display: inline-flex;
+  margin: 30px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.Mtemp:hover {
+  background-color: rgb(80, 80, 237);
+  transform: scale(1.1);
+}
+.mtemp:hover {
+  background-color: rgb(80, 80, 237);
+  transform: scale(1.1);
+}
+nav {
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50 px 0px 100px;
+}
+.logo {
+  font-size: 30px;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0px 7px;
+  letter-spacing: 1px;
+}
+nav ul li {
+  color: white;
+  text-decoration: none;
+}
